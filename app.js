@@ -7,7 +7,7 @@ require('dotenv').config();
 let mongoose = require('mongoose');
 
 // Khuyến khích user tự thay thế bằng chuỗi kết nối của họ nếu chạy trên máy
-const mongoURI = process.env.MONGO_URI || 'mongodb+srv://greatstack:kien123456/NNPTUD-C3?retryWrites=true&w=majority';
+const mongoURI = process.env.MONGO_URI || 'mongodb+srv://greatstack:kien123456@cluster1.j1fbp3j.mongodb.net/NNPTUD-C3?retryWrites=true&w=majority';
 mongoose.connect(mongoURI).then(() => console.log('MongoDB Connected')).catch(err => console.log('MongoDB Error:', err));
 
 var indexRouter = require('./routes/index');
